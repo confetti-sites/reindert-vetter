@@ -19,6 +19,6 @@ COPY --chown=www-data:www-data . .
 
 RUN composer install
 
-#HEALTHCHECK --interval=2s --timeout=2s --start-period=2s --start-interval=2s --retries=60 CMD curl -f view || exit 1
+HEALTHCHECK --interval=2s --timeout=2s --start-period=2s --start-interval=2s --retries=60 CMD curl -f view || exit 1
 
 CMD ["php-fpm"]
