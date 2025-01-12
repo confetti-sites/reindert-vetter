@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Src;
 
-use App\Exceptions\FileNotFoundException;
-use App\Render\BladeOne;
-use App\Render\RenderService;
+use Foundation\Exceptions\FileNotFoundException;
+use Foundation\Render\BladeOne;
+use Foundation\Render\RenderService;
 use Exception;
 use Src\Http\Routes\Admin;
 use Src\Http\Routes\Website;
