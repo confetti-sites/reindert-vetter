@@ -5,7 +5,7 @@
             "model\\": "/var/resources/confetti-cms__structure/model",
             "query\\": "/var/resources/confetti-cms__structure/query",
             "Src\\": "/var/repository/Src/",
-            "App\\": "App/"
+            "Foundation\\": "/var/repository/foundation/Src/"
         },
         "files": [
             "fileloader.php",

@@ -24,7 +24,7 @@ class BladeOneService implements RenderInterface
      */
     public function renderByUrl(string $uri): string
     {
-        return (new \Src\Bootstrap($this->repository, $this->cacheDir))->boot();
+        return (new \Bootstrap\Bootstrap($this->repository, $this->cacheDir))->boot();
     }
 
     public function renderByView(string $view, $variables = []): string

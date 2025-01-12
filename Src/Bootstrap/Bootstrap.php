@@ -2,12 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Src;
+namespace Bootstrap;
 
-use Foundation\Exceptions\FileNotFoundException;
-use Foundation\Render\BladeOne;
-use Foundation\Render\RenderService;
 use Exception;
+use Foundation\Render\BladeOne;
 use Src\Http\Routes\Admin;
 use Src\Http\Routes\Website;
 
