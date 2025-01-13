@@ -16,7 +16,7 @@
       containers: [
         // Main view service
         {
-          name: 'confetti-cms/view-php',
+          name: 'view',
           hosts: [
             'reindert-vetter.confetti-cms.localhost',
           ],
@@ -31,6 +31,7 @@
           ],
           paths: [
             // Replace '__SERVICE__' with the name of the service.
+            // A service is the path to the Docker container. /website/tailwind.Dockerfile will be 'website-tailwind'
             // For example: Service "media" will be available at '/conf_api/media'
             '/conf_api/__SERVICE__',
           ],
