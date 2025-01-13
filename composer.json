@@ -4,15 +4,14 @@
       "Confetti\\": "/var/resources/confetti-cms__parser/Confetti",
       "model\\": "/var/resources/confetti-cms__structure/model",
       "query\\": "/var/resources/confetti-cms__structure/query",
-      "Src\\": "/var/repository/Src/",
-      "App\\": "App/"
+      "App\\": "/var/repository/App/"
     },
     "files": [
-      "fileloader.php",
-      "/var/repository/Src/Confetti/Model/RawFile.php",
-      "/var/repository/Src/Confetti/Helpers/ContentStore.php",
-      "/var/repository/Src/Confetti/Helpers/QueryBuilder.php",
-      "/var/repository/Src/Confetti/Helpers/ComponentStandard.php"
+      "/var/src/foundation/fileloader.php2",
+      "/var/src/App/Confetti/Model/RawFile.php",
+      "/var/src/App/Confetti/Helpers/ContentStore.php",
+      "/var/src/App/Confetti/Helpers/QueryBuilder.php",
+      "/var/src/App/Confetti/Helpers/ComponentStandard.php"
     ]
   },
   "autoload-dev": {

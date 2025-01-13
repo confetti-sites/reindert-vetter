@@ -21,13 +21,15 @@ RUN composer install
 
 CMD ["php-fpm"]
 
+
+# This stage is used to watch for changes in the composer files
 FROM php:8.2.0-alpine as development-all_up
 
 RUN apk add --no-cache \
     bash \
     git \
     curl \
-    inotify-tools
+    entr
 
 RUN mkdir -p /var/www/cache
 RUN chown -R www-data:www-data /var/www/cache
@@ -40,4 +42,4 @@ WORKDIR /src
 COPY --chown=www-data:www-data . .
 
 # Set the default command
-CMD "while inotifywait -e modify /src/composer.lock; do composer install; done"
+CMD "ls composer.* | entr -r timeout 5s composer install"
