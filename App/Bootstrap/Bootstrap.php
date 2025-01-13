@@ -6,8 +6,8 @@ namespace Bootstrap;
 
 use Exception;
 use Foundation\Render\BladeOne;
-use Src\Http\Routes\Admin;
-use Src\Http\Routes\Website;
+use App\Http\Routes\Admin;
+use App\Http\Routes\Website;
 
 class Bootstrap
 {

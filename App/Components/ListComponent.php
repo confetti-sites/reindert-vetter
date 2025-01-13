@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Src\Components;
+namespace App\Components;
 
 use Confetti\Components\Map;
 use Confetti\Contracts\SelectModelInterface;

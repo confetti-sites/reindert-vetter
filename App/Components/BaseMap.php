@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Src\Components;
+namespace App\Components;
 
 use Confetti\Helpers\ComponentEntity;
 use Confetti\Helpers\ComponentStandard;
@@ -79,7 +79,7 @@ abstract class BaseMap
     }
 
     /**
-     * @return \Confetti\Components\Map[]|\Src\Components\ListComponent[]
+     * @return \Confetti\Components\Map[]|\App\Components\ListComponent[]
      */
     public function getChildren(): array
     {

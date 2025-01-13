@@ -1,7 +1,7 @@
 @php
-    /** @var \Src\Components\ListComponent $model */
+    /** @var \App\Components\ListComponent $model */
     /** @var \Confetti\Helpers\ComponentEntity $component */
-    use Src\Components\ListComponent;
+    use App\Components\ListComponent;
     $component = $model->getComponent();
     [$columns, $originalRows] = ListComponent::getColumnsAndRows($model);
 @endphp

@@ -1,6 +1,6 @@
 <?php
 
-namespace Src\Http\Entity;
+namespace App\Http\Entity;
 
 readonly class View
 {

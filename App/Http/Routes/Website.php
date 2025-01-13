@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Src\Http\Routes;
+namespace App\Http\Routes;
 
-use Src\Http\Entity\View;
+use App\Http\Entity\View;
 
 class Website
 {

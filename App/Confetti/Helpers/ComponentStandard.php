@@ -9,8 +9,8 @@ use Confetti\Components\Map;
 use Exception;
 use JsonException;
 use RuntimeException;
-use Src\Components\ListComponent;
-use Src\Components\SelectFileComponent;
+use App\Components\ListComponent;
+use App\Components\SelectFileComponent;
 
 abstract class ComponentStandard
 {
@@ -122,7 +122,7 @@ abstract class ComponentStandard
     }
 
     /**
-     * When using the abstract component (\Src\Components\TextComponent) we use this method.
+     * When using the abstract component (\App\Components\TextComponent) we use this method.
      * For example, as a child of the ContentComponent.
      * The specific component (\model\homepage\feature\title) will override this method.
      */
