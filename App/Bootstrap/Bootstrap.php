@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Bootstrap;
+namespace App\Bootstrap;
 
 use Exception;
 use Foundation\Render\BladeOne;

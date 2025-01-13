@@ -4,11 +4,18 @@ declare(strict_types=1);
 
 namespace Foundation\Render;
 
+use Exception;
 use Foundation\User;
 use Countable;
 use IteratorAggregate;
+use function array_pop;
 use function array_reverse;
+use function count;
 use function implode;
+use function in_array;
+use function is_countable;
+use function ob_get_clean;
+use function ob_start;
 use function substr;
 
 class BladeOne extends \eftec\bladeone\BladeOne
@@ -29,7 +36,7 @@ class BladeOne extends \eftec\bladeone\BladeOne
             }
 
             $permission = '/' . $_ENV['PROJECT_REPOSITORY_NAME'] . '/' . $permission;
-            return \in_array($permission, $this->currentPermission, true);
+            return in_array($permission, $this->currentPermission, true);
         });
 
         $this->setAnyFunction(function ($array = []) {
@@ -39,7 +46,7 @@ class BladeOne extends \eftec\bladeone\BladeOne
 
             foreach ($array as $permission) {
                 $permission = '/' . $_ENV['PROJECT_REPOSITORY_NAME'] . '/' . $permission;
-                if (\in_array($permission, $this->currentPermission ?? [], true)) {
+                if (in_array($permission, $this->currentPermission ?? [], true)) {
                     return true;
                 }
             }
@@ -71,7 +78,7 @@ class BladeOne extends \eftec\bladeone\BladeOne
 
         $response = curl_exec($curl);
         if($response === false) {
-            throw new \Exception('Error: with url ' . $url . ': Message: ' .curl_error($curl));
+            throw new Exception('Error: with url ' . $url . ': Message: ' .curl_error($curl));
         }
         $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
@@ -86,7 +93,7 @@ class BladeOne extends \eftec\bladeone\BladeOne
         }
 
         if ($httpCode >= 400) {
-            throw new \Exception('Error: ' . $response . ': Code: ' . $httpCode);
+            throw new Exception('Error: ' . $response . ': Code: ' . $httpCode);
         }
         $body = json_decode($response, true);
         $this->currentUser = $body['name'];
@@ -179,7 +186,7 @@ class BladeOne extends \eftec\bladeone\BladeOne
     public function startPush($section, $content = '', $once = false): void
     {
         if ($content === '') {
-            if (\ob_start()) {
+            if (ob_start()) {
                 $this->pushStack[] = $section;
             }
         } else {
@@ -227,8 +234,8 @@ class BladeOne extends \eftec\bladeone\BladeOne
         if (empty($this->pushStack)) {
             $this->showError('stopPush', 'Cannot end a section without first starting one', true);
         }
-        $last = \array_pop($this->pushStack);
-        $this->extendPush($last, \ob_get_clean(), true);
+        $last = array_pop($this->pushStack);
+        $this->extendPush($last, ob_get_clean(), true);
         return $last;
     }
 
@@ -242,7 +249,7 @@ class BladeOne extends \eftec\bladeone\BladeOne
     {
         // `!$data instanceof IteratorAggregate` is an override to the original code
         // We don't want to trigger the `getIterator` method on the object
-        $length = (\is_countable($data) || $data instanceof Countable) && !$data instanceof IteratorAggregate ? \count($data) : null;
+        $length = (is_countable($data) || $data instanceof Countable) && !$data instanceof IteratorAggregate ? count($data) : null;
         $parent = static::last($this->loopsStack);
         $this->loopsStack[] = [
             'index' => -1,
@@ -253,7 +260,7 @@ class BladeOne extends \eftec\bladeone\BladeOne
             'even' => true,
             'odd' => false,
             'last' => isset($length) ? $length == 1 : null,
-            'depth' => \count($this->loopsStack) + 1,
+            'depth' => count($this->loopsStack) + 1,
             'parent' => $parent ? (object)$parent : null,
         ];
     }

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Foundation\Render;
 
+use App\Bootstrap\Bootstrap;
+
 class BladeOneService implements RenderInterface
 {
 
@@ -24,7 +26,7 @@ class BladeOneService implements RenderInterface
      */
     public function renderByUrl(string $uri): string
     {
-        return (new \Bootstrap\Bootstrap($this->repository, $this->cacheDir))->boot();
+        return (new Bootstrap($this->repository, $this->cacheDir))->boot();
     }
 
     public function renderByView(string $view, $variables = []): string
