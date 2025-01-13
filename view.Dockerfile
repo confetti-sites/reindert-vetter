@@ -28,8 +28,7 @@ FROM php:8.2.0-alpine as development-all_up
 RUN apk add --no-cache \
     bash \
     git \
-    curl \
-    entr
+    curl
 
 RUN mkdir -p /var/www/cache
 RUN chown -R www-data:www-data /var/www/cache
@@ -42,4 +41,4 @@ WORKDIR /src
 COPY --chown=www-data:www-data . .
 
 # Set the default command
-CMD "ls composer.* | entr -r timeout 5s composer install"
+CMD "apk add entr && ls composer.* | entr -r timeout 5s composer install"
