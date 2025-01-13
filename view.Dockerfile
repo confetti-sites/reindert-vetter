@@ -42,4 +42,4 @@ WORKDIR /src
 COPY --chown=www-data:www-data . .
 
 # Set the default command
-CMD "ls composer.* | entr -r timeout 5s /usr/local/bin/composer install"
+CMD "ls composer.* | entr -r timeout 5s echo 'composer.json or composer.lock has changed'"
