@@ -41,5 +41,4 @@ WORKDIR /src
 
 COPY --chown=www-data:www-data . .
 
-# Set the default command
-CMD "ls composer.*"
+CMD ["sh", "-c", "ls composer.* | entr -r timeout 5s composer install"]
