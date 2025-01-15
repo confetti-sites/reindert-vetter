@@ -8,11 +8,11 @@
       "Foundation\\": "/src/foundation/src"
     },
     "files": [
-      "/src/foundation/fileloader.php",
-      "/src/App/Confetti/Model/RawFile.php",
+      "/src/App/Confetti/Helpers/ComponentStandard.php",
       "/src/App/Confetti/Helpers/ContentStore.php",
       "/src/App/Confetti/Helpers/QueryBuilder.php",
-      "/src/App/Confetti/Helpers/ComponentStandard.php"
+      "/src/App/Confetti/Model/RawFile.php",
+      "/src/foundation/fileloader.php"
     ]
   },
   "autoload-dev": {
