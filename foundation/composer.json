@@ -9,18 +9,31 @@
     "homepage": "https://confetti-cms.com",
     "require": {
         "php": ">=8.1",
+        "confetti-cms/foundation": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^10.2",
+        "phpunit/phpunit": "^10.2"
     },
+    "files": [
+        "fileloader.php"
+    ],
     "autoload": {
         "psr-4": {
-            "ConfettiCMS\\Foundation\\": "src"
+            "Confetti\\": "/var/resources/confetti-cms__parser/Confetti",
+            "model\\": "/var/resources/confetti-cms__structure/model",
+            "query\\": "/var/resources/confetti-cms__structure/query",
+            "ConfettiCMS\\Foundation\\": "Src"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "ConfettiCMS\\Foundation\\Tests\\": "Tests/"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../foundation"
+        }
+    ]
 }

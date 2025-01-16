@@ -1,29 +1,24 @@
 {
+  "require": {
+    "eftec/bladeone": "^4.16",
+    "colinodell/json5": "^3.0",
+    "ext-curl": "*"
+  },
   "autoload": {
     "psr-4": {
-      "Confetti\\": "/var/resources/confetti-cms__parser/Confetti",
-      "model\\": "/var/resources/confetti-cms__structure/model",
-      "query\\": "/var/resources/confetti-cms__structure/query",
-      "App\\": "/src/App/",
-      "Foundation\\": "/src/foundation/src"
+      "App\\": "/src/App/"
     },
     "files": [
       "/src/App/Confetti/Helpers/ComponentStandard.php",
       "/src/App/Confetti/Helpers/ContentStore.php",
       "/src/App/Confetti/Helpers/QueryBuilder.php",
-      "/src/App/Confetti/Model/RawFile.php",
-      "/src/foundation/fileloader.php"
+      "/src/App/Confetti/Model/RawFile.php"
     ]
   },
   "autoload-dev": {
     "psr-4": {
       "Tests\\": "tests/"
     }
-  },
-  "require": {
-    "eftec/bladeone": "^4.16",
-    "colinodell/json5": "^3.0",
-    "ext-curl": "*"
   },
   "require-dev": {
     "phpunit/phpunit": "^10.0"
