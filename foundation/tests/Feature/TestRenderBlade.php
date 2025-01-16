@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Feature;
 
-use Foundation\Exceptions\FileNotFoundException;
-use Foundation\Render\BladeOneService;
+use ConfettiCMS\Foundation\Exceptions\FileNotFoundException;
+use ConfettiCMS\Foundation\Render\BladeOneService;
 use PHPUnit\Framework\TestCase;
 
 class TestRenderBlade extends TestCase

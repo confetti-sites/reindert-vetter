@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-use Foundation\Kernel;
+use ConfettiCMS\Foundation\Kernel;
 
 ini_set('zend.exception_string_param_max_len', '200');
 

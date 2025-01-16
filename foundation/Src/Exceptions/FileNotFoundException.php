@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Foundation\Exceptions;
+namespace ConfettiCMS\Foundation\Exceptions;
 
 use Exception;
 

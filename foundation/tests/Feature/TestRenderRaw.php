@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
-use Foundation\Render\RawService;
+use ConfettiCMS\Foundation\Render\RawService;
 use PHPUnit\Framework\TestCase;
 
 class TestRenderRaw extends TestCase

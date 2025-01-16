@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Foundation\Render;
+namespace ConfettiCMS\Foundation\Render;
 
 class RawService implements RenderInterface
 {
