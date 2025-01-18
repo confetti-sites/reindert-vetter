@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace ConfettiCMS\Foundation\Helpers;
 
 
-use;
 use App\Components\ListComponent;
 use App\Components\SelectFileComponent;
 use Confetti\Components\Map;
