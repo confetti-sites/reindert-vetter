@@ -2,6 +2,8 @@
 
 namespace Confetti\Helpers;
 
+use ConfettiCMS\Foundation\Helpers\Client;
+
 class QueryBuilder
 {
     private const MODEL_PREFIX = '/model/';

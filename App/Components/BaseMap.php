@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Components;
 
-use Confetti\Helpers\ComponentEntity;
 use Confetti\Helpers\ComponentStandard;
 use Confetti\Helpers\ContentStore;
-use Confetti\Helpers\DeveloperActionRequiredException;
+use ConfettiCMS\Foundation\Helpers\ComponentEntity;
+use ConfettiCMS\Foundation\Helpers\DeveloperActionRequiredException;
 
 abstract class BaseMap
 {

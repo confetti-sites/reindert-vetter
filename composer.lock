@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "294e06a464654a5706bdfd55a9989623",
+    "content-hash": "862f169b4ed3abaec4cd7057106692a5",
     "packages": [
         {
             "name": "colinodell/json5",
@@ -93,6 +93,45 @@
                 }
             ],
             "time": "2024-02-09T13:06:12+00:00"
+        },
+        {
+            "name": "confetti-cms/foundation",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "foundation",
+                "reference": "a18fc132448fda3138f61e431a51075c62b80403"
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Confetti\\": "/var/resources/confetti-cms__parser/Confetti",
+                    "model\\": "/var/resources/confetti-cms__structure/model",
+                    "query\\": "/var/resources/confetti-cms__structure/query",
+                    "ConfettiCMS\\Foundation\\": "Src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "ConfettiCMS\\Foundation\\Tests\\": "Tests/"
+                }
+            },
+            "description": "This is a package for the foundation of the Confetti CMS. For example, it contains the abstract ORM classes.",
+            "homepage": "https://confetti-cms.com",
+            "keywords": [
+                "Blade",
+                "CMS",
+                "Confetti"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "eftec/bladeone",
@@ -1781,9 +1820,9 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "ext-curl": "*"

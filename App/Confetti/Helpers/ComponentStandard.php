@@ -5,12 +5,15 @@ declare(strict_types=1);
 namespace Confetti\Helpers;
 
 
+use App\Components\ListComponent;
+use App\Components\SelectFileComponent;
 use Confetti\Components\Map;
+use ConfettiCMS\Foundation\Helpers\ComponentEntity;
+use ConfettiCMS\Foundation\Helpers\DeveloperActionRequiredException;
+use ConfettiCMS\Foundation\Helpers\SourceEntity;
 use Exception;
 use JsonException;
 use RuntimeException;
-use App\Components\ListComponent;
-use App\Components\SelectFileComponent;
 
 abstract class ComponentStandard
 {
@@ -174,7 +177,7 @@ abstract class ComponentStandard
 
     /**
      * @param string[] $ids
-     * @return string[]|Map[]|ComponentStandard[]|\Confetti\Helpers\DeveloperActionRequiredException
+     * @return string[]|Map[]|ComponentStandard[]|\ConfettiCMS\Foundation\Helpers\DeveloperActionRequiredException
      */
     public static function componentClassNamesByIds(array $ids, ContentStore $store): array|DeveloperActionRequiredException
     {

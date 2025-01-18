@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Confetti\Model;
 
-use Confetti\Helpers\ComponentEntity;
-use Confetti\Helpers\SourceEntity;
+use ConfettiCMS\Foundation\Helpers\ComponentEntity;
+use ConfettiCMS\Foundation\Helpers\SourceEntity;
 
 readonly class RawFile
 {

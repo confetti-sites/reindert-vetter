@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace App\Components;
 
 use Confetti\Components\Map;
-use Confetti\Contracts\SelectModelInterface;
-use Confetti\Helpers\ComponentEntity;
 use Confetti\Helpers\ComponentStandard;
-use Confetti\Helpers\ConditionDoesNotMatchConditionFromContent;
 use Confetti\Helpers\ContentStore;
+use ConfettiCMS\Foundation\Contracts\SelectModelInterface;
+use ConfettiCMS\Foundation\Helpers\ComponentEntity;
+use ConfettiCMS\Foundation\Helpers\ConditionDoesNotMatchConditionFromContent;
 use Countable;
 use IteratorAggregate;
 use Traversable;

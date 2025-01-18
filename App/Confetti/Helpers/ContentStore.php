@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Confetti\Helpers;
 
+use ConfettiCMS\Foundation\Helpers\ConditionDoesNotMatchConditionFromContent;
+
 class ContentStore
 {
     private QueryBuilder $queryBuilder;

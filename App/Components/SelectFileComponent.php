@@ -6,11 +6,11 @@ namespace App\Components;
 
 use Confetti\Components\FilePatternArray;
 use Confetti\Components\Map;
-use Confetti\Contracts\SelectFileInterface;
-use Confetti\Contracts\SelectModelInterface;
 use Confetti\Helpers\ComponentStandard;
 use Confetti\Helpers\ContentStore;
 use Confetti\Model\RawFile;
+use ConfettiCMS\Foundation\Contracts\SelectFileInterface;
+use ConfettiCMS\Foundation\Contracts\SelectModelInterface;
 
 class SelectFileComponent extends ComponentStandard implements SelectModelInterface, SelectFileInterface
 {

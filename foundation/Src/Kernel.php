@@ -15,7 +15,8 @@ class Kernel
 
     public function setEnvironmentSettings(): void
     {
-        $envKey = $_ENV['APP_ENV'] ?? throw new \RuntimeException("Environment variable 'APP_ENV' is not set.");
+//        $envKey = $_ENV['APP_STAGE'] ?? throw new \RuntimeException("Environment stage is not set. (Missing APP_STAGE)");
+        $envKey = $_ENV['APP_STAGE'] ?? 'development'; // TMP, remove this after redeploying the app
         try {
             $content = file_get_contents(RenderService::CONFIG_FILE_PATH);
             $config = Json5Decoder::decode($content, true, 512, JSON_THROW_ON_ERROR);
@@ -46,6 +47,9 @@ class Kernel
             http_response_code(404);
             $this->body = $e->getMessage();
         } catch (\Throwable|\TypeError|\ValueError $e) {
+
+//        $envKey = $_ENV['APP_STAGE'] ?? throw new \RuntimeException("Environment stage is not set. (Missing APP_STAGE)");
+            $envKey = $_ENV['APP_STAGE'] ?? 'development'; // TMP, remove this after redeploying the app
             switch (true) {
                 // Error in blade template
                 case str_contains($e->getTrace()[0]['file'] ?? '', '.bladec'):
@@ -54,17 +58,15 @@ class Kernel
                     http_response_code(500);
                     exit(1);
                 default:
-                    echo '<pre>';
-                    print_r($e->getMessage());
-                    echo '</pre>';
-                    echo '<pre>';
-                    print_r($e->getTraceAsString());
-                    echo '</pre>';
-//                    only for development
+                    if ($envKey === 'development') {
+                        echo '<pre>';
+                        print_r($e->getMessage());
+                        echo '</pre>';
+                        echo '<pre>';
+                        print_r($e->getTraceAsString());
+                        echo '</pre>';
+                    }
                     http_response_code(500);
-//                    /** @noinspection ForgottenDebugOutputInspection */
-//                    error_log($e->getMessage() . PHP_EOL . $e->getTraceAsString());
-//                    exit(1);
             }
 
         }
