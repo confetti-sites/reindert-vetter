@@ -1,7 +1,7 @@
 <!--suppress HtmlUnknownAttribute, HtmlUnknownTag, PhpParamsInspection -->
 @php
     /** @var \App\Components\SelectFileComponent $model */
-    use Confetti\Helpers\ComponentStandard;
+    use ConfettiCMS\Foundation\Helpers\ComponentStandard;
     $useLabelForRelative = $model->getComponent()->getDecoration('useLabelFor');
     $optionsValues = array_map(function ($option) {
         return [
@@ -10,7 +10,7 @@
         ];
     }, $model->getOptions());
 @endphp
-<!-- suppress HtmlUnknownTag -->
+        <!-- suppress HtmlUnknownTag -->
 <select-file-component
         data-component="{{ json_encode($model->getComponent()) }}"
         data-decorations='{{ json_encode($model->getComponent()->getDecorations()) }}'

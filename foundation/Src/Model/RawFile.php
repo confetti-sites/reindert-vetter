@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Confetti\Model;
+namespace ConfettiCMS\Foundation\Model;
 
 use ConfettiCMS\Foundation\Helpers\ComponentEntity;
 use ConfettiCMS\Foundation\Helpers\SourceEntity;

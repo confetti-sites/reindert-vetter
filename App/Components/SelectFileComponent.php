@@ -6,11 +6,11 @@ namespace App\Components;
 
 use Confetti\Components\FilePatternArray;
 use Confetti\Components\Map;
-use Confetti\Helpers\ComponentStandard;
-use Confetti\Helpers\ContentStore;
-use Confetti\Model\RawFile;
 use ConfettiCMS\Foundation\Contracts\SelectFileInterface;
 use ConfettiCMS\Foundation\Contracts\SelectModelInterface;
+use ConfettiCMS\Foundation\Helpers\ComponentStandard;
+use ConfettiCMS\Foundation\Helpers\ContentStore;
+use ConfettiCMS\Foundation\Model\RawFile;
 
 class SelectFileComponent extends ComponentStandard implements SelectModelInterface, SelectFileInterface
 {
@@ -66,7 +66,7 @@ class SelectFileComponent extends ComponentStandard implements SelectModelInterf
     }
 
     /**
-     * @return \Confetti\Components\Map[]|\Confetti\Model\RawFile[]
+     * @return \Confetti\Components\Map[]|\ConfettiCMS\Foundation\Model\RawFile[]
      */
     public function getOptions(): array
     {

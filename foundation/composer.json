@@ -13,9 +13,6 @@
     "require-dev": {
         "phpunit/phpunit": "^10.2"
     },
-    "files": [
-        "fileloader.php"
-    ],
     "autoload": {
         "psr-4": {
             "Confetti\\": "/var/resources/confetti-cms__parser/Confetti",

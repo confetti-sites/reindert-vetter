@@ -2,15 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Confetti\Helpers;
+namespace ConfettiCMS\Foundation\Helpers;
 
 
+use;
 use App\Components\ListComponent;
 use App\Components\SelectFileComponent;
 use Confetti\Components\Map;
-use ConfettiCMS\Foundation\Helpers\ComponentEntity;
-use ConfettiCMS\Foundation\Helpers\DeveloperActionRequiredException;
-use ConfettiCMS\Foundation\Helpers\SourceEntity;
 use Exception;
 use JsonException;
 use RuntimeException;
