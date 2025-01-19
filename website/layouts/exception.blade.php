@@ -35,7 +35,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>{{ $message1 }}</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>{{ $emoji }}</text></svg>"></link>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>{{ $emoji }}</text></svg>">
     <style>
         body {
             font-family: 'Trebuchet MS', sans-serif;
@@ -124,7 +124,7 @@
 <div style="display: flex; justify-content: center; align-items: center; font-size: small;margin-top: 25%;padding: 10px;">
     <div style="border-collapse: collapse;border-left-color: gray;border-left-style: solid;border-left-width: 10px;padding-left: 30px">
         <div style="font-size: xx-large; color: rgb(159, 0, 0);">{{ $message1 }}</div>
-        <div style="font-size: x-large; color: rgb(159, 0, 0); cursor: pointer; max-width: fit-content; max-width: 56rem;" onclick="copyToClipboard('{{ $message2 }}');">{{ $message2 }}</div>
+        <div style="font-size: x-large; color: rgb(159, 0, 0); cursor: pointer; max-width: 56rem;" onclick="copyToClipboard('{{ $message2 }}');">{{ $message2 }}</div>
         <div class="hide_on_mobile" style="margin-top: 20px">
             @foreach($paths as $i => $path)
                 <div class="{{ $i > 0 ? 'hide_on_mobile' : '' }}" style="font-size: x-large; color: gray; margin-top: 10px; cursor: pointer;" onclick="copyToClipboard('{{ $path }}');">{{ $path }}</div>
