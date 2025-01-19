@@ -1,6 +1,6 @@
 @php
     /** @var \App\Components\ListComponent $model */
-    /** @var \ConfettiCMS\Foundation\Helpers\ComponentEntity $component */
+    /** @var \Confetti\Foundation\Helpers\ComponentEntity $component */
     use App\Components\ListComponent;
     $component = $model->getComponent();
     [$columns, $originalRows] = ListComponent::getColumnsAndRows($model);

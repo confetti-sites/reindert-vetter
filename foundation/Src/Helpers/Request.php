@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ConfettiCMS\Foundation\Helpers;
+namespace Confetti\Foundation\Helpers;
 
 class Request
 {

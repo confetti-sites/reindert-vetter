@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace ConfettiCMS\Foundation\Contracts;
+namespace Confetti\Foundation\Contracts;
 
 interface SelectModelInterface
 {
     /**
-     * @return \Confetti\Components\Map|\ConfettiCMS\Foundation\Model\RawFile|null Return type is mixed
+     * @return \Confetti\Parser\Components\Map|\Confetti\Foundation\Model\RawFile|null Return type is mixed
      *         because the return value will be narrowed down in the parent class.
      */
     public function getSelected(): mixed;

@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace App\Components;
 
-use Confetti\Components\FilePatternArray;
-use Confetti\Components\Map;
-use ConfettiCMS\Foundation\Contracts\SelectFileInterface;
-use ConfettiCMS\Foundation\Contracts\SelectModelInterface;
-use ConfettiCMS\Foundation\Helpers\ComponentStandard;
-use ConfettiCMS\Foundation\Helpers\ContentStore;
-use ConfettiCMS\Foundation\Model\RawFile;
+use Confetti\Foundation\Attributes\FilePatternArray;
+use Confetti\Parser\Components\Map;
+use Confetti\Foundation\Contracts\SelectFileInterface;
+use Confetti\Foundation\Contracts\SelectModelInterface;
+use Confetti\Foundation\Helpers\ComponentStandard;
+use Confetti\Foundation\Helpers\ContentStore;
+use Confetti\Foundation\Model\RawFile;
 
 class SelectFileComponent extends ComponentStandard implements SelectModelInterface, SelectFileInterface
 {
@@ -55,9 +55,6 @@ class SelectFileComponent extends ComponentStandard implements SelectModelInterf
         }
 
         if (!str_ends_with($file, '.blade.php')) {
-            if ($file === null) {
-                return null;
-            }
             return $file;
         }
         $file = str_replace('.blade.php', '', $file);
@@ -66,7 +63,7 @@ class SelectFileComponent extends ComponentStandard implements SelectModelInterf
     }
 
     /**
-     * @return \Confetti\Components\Map[]|\ConfettiCMS\Foundation\Model\RawFile[]
+     * @return \Confetti\Parser\Components\Map[]|\Confetti\Foundation\Model\RawFile[]
      */
     public function getOptions(): array
     {

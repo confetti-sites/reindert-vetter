@@ -1,6 +1,6 @@
 <?php
 
-namespace ConfettiCMS\Foundation\Attributes;
+namespace Confetti\Foundation\Attributes;
 
 #[\Attribute] class Model
 {

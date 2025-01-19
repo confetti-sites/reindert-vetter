@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Components;
 
-use ConfettiCMS\Foundation\Helpers\ComponentEntity;
-use ConfettiCMS\Foundation\Helpers\ComponentStandard;
-use ConfettiCMS\Foundation\Helpers\ContentStore;
-use ConfettiCMS\Foundation\Helpers\DeveloperActionRequiredException;
+use Confetti\Foundation\Helpers\ComponentEntity;
+use Confetti\Foundation\Helpers\ComponentStandard;
+use Confetti\Foundation\Helpers\ContentStore;
+use Confetti\Foundation\Helpers\DeveloperActionRequiredException;
 
 abstract class BaseMap
 {
@@ -79,7 +79,7 @@ abstract class BaseMap
     }
 
     /**
-     * @return \Confetti\Components\Map[]|\App\Components\ListComponent[]
+     * @return \Confetti\Parser\Components\Map[]|\App\Components\ListComponent[]
      */
     public function getChildren(): array
     {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace ConfettiCMS\Foundation;
+namespace Confetti\Foundation;
 
-use ConfettiCMS\Foundation\Exceptions\FileNotFoundException;
-use ConfettiCMS\Foundation\Render\RenderService;
+use Confetti\Foundation\Exceptions\FileNotFoundException;
+use Confetti\Foundation\Render\RenderService;
 use ColinODell\Json5\Json5Decoder;
 use ErrorException;
 
@@ -15,8 +15,7 @@ class Kernel
 
     public function setEnvironmentSettings(): void
     {
-//        $envKey = $_ENV['APP_STAGE'] ?? throw new \RuntimeException("Environment stage is not set. (Missing APP_STAGE)");
-        $envKey = $_ENV['APP_STAGE'] ?? 'development'; // TMP, remove this after redeploying the app
+        $envKey = $_ENV['APP_STAGE'] ?? throw new \RuntimeException("Environment stage is not set. (Missing APP_STAGE)");
         try {
             $content = file_get_contents(RenderService::CONFIG_FILE_PATH);
             $config = Json5Decoder::decode($content, true, 512, JSON_THROW_ON_ERROR);
@@ -47,14 +46,12 @@ class Kernel
             http_response_code(404);
             $this->body = $e->getMessage();
         } catch (\Throwable|\TypeError|\ValueError $e) {
-
-//        $envKey = $_ENV['APP_STAGE'] ?? throw new \RuntimeException("Environment stage is not set. (Missing APP_STAGE)");
-            $envKey = $_ENV['APP_STAGE'] ?? 'development'; // TMP, remove this after redeploying the app
+            $envKey = $_ENV['APP_STAGE'] ?? throw new \RuntimeException("Environment stage is not set. (Missing APP_STAGE)");
             switch (true) {
                 // Error in blade template
                 case str_contains($e->getTrace()[0]['file'] ?? '', '.bladec'):
                     $render = (new RenderService());
-                    echo $render->renderLocalView('pages.blade_exception', ['exception' => $e]);
+                    echo $render->renderLocalView('website.layouts.exception', ['exception' => $e]);
                     http_response_code(500);
                     exit(1);
                 default:

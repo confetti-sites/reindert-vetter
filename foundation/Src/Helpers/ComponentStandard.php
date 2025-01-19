@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace ConfettiCMS\Foundation\Helpers;
+namespace Confetti\Foundation\Helpers;
 
 
 use App\Components\ListComponent;
 use App\Components\SelectFileComponent;
-use Confetti\Components\Map;
+use Confetti\Parser\Components\Map;
 use Exception;
 use JsonException;
 use RuntimeException;
@@ -174,7 +174,7 @@ abstract class ComponentStandard
 
     /**
      * @param string[] $ids
-     * @return string[]|Map[]|ComponentStandard[]|\ConfettiCMS\Foundation\Helpers\DeveloperActionRequiredException
+     * @return string[]|Map[]|ComponentStandard[]|\Confetti\Foundation\Helpers\DeveloperActionRequiredException
      */
     public static function componentClassNamesByIds(array $ids, ContentStore $store): array|DeveloperActionRequiredException
     {
@@ -202,7 +202,7 @@ abstract class ComponentStandard
     }
 
     /**
-     * @return class-string|\Confetti\Components\Map|ComponentStandard
+     * @return class-string|\Confetti\Parser\Components\Map|ComponentStandard
      * @noinspection PhpDocSignatureInspection
      */
     public static function componentClassById(string $id, ContentStore $store): string|DeveloperActionRequiredException

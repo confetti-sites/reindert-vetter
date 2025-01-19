@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace ConfettiCMS\Foundation\Model;
+namespace Confetti\Foundation\Model;
 
-use ConfettiCMS\Foundation\Helpers\ComponentEntity;
-use ConfettiCMS\Foundation\Helpers\SourceEntity;
+use Confetti\Foundation\Helpers\ComponentEntity;
+use Confetti\Foundation\Helpers\SourceEntity;
 
 readonly class RawFile
 {

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace ConfettiCMS\Foundation\Contracts;
+namespace Confetti\Foundation\Contracts;
 
 interface SelectFileInterface
 {
     /**
-     * @return \Confetti\Components\Map[]
+     * @return \Confetti\Parser\Components\Map[]
      */
     public function getOptions(): array;
 }

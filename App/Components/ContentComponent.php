@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Components;
 
-use ConfettiCMS\Foundation\Helpers\ComponentStandard;
+use Confetti\Foundation\Helpers\ComponentStandard;
 
 class ContentComponent extends ComponentStandard
 {

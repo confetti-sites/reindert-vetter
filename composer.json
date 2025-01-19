@@ -13,14 +13,11 @@
   ],
   "autoload": {
     "psr-4": {
+      "Confetti\\Parser\\": "/var/resources/confetti-cms__parser/Confetti",
+      "model\\": "/var/resources/confetti-cms__structure/model",
+      "query\\": "/var/resources/confetti-cms__structure/query",
       "App\\": "/src/App/"
-    },
-    "files": [
-      "/src/App/Confetti/Helpers/ComponentStandard.php",
-      "/src/App/Confetti/Helpers/ContentStore.php",
-      "/src/App/Confetti/Helpers/QueryBuilder.php",
-      "/src/App/Confetti/Model/RawFile.php"
-    ]
+    }
   },
   "autoload-dev": {
     "psr-4": {

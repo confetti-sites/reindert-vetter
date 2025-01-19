@@ -1,6 +1,6 @@
 <?php
 
-namespace ConfettiCMS\Foundation\Render;
+namespace Confetti\Foundation\Render;
 
 interface RenderInterface
 {

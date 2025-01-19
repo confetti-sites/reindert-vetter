@@ -15,15 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Confetti\\": "/var/resources/confetti-cms__parser/Confetti",
-            "model\\": "/var/resources/confetti-cms__structure/model",
-            "query\\": "/var/resources/confetti-cms__structure/query",
-            "ConfettiCMS\\Foundation\\": "Src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "ConfettiCMS\\Foundation\\Tests\\": "Tests/"
+            "Confetti\\Foundation\\": "Src"
         }
     }
 }

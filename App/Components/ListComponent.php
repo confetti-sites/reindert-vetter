@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace App\Components;
 
-use Confetti\Components\Map;
-use ConfettiCMS\Foundation\Contracts\SelectModelInterface;
-use ConfettiCMS\Foundation\Helpers\ComponentEntity;
-use ConfettiCMS\Foundation\Helpers\ComponentStandard;
-use ConfettiCMS\Foundation\Helpers\ConditionDoesNotMatchConditionFromContent;
-use ConfettiCMS\Foundation\Helpers\ContentStore;
+use Confetti\Parser\Components\Map;
+use Confetti\Foundation\Contracts\SelectModelInterface;
+use Confetti\Foundation\Helpers\ComponentEntity;
+use Confetti\Foundation\Helpers\ComponentStandard;
+use Confetti\Foundation\Helpers\ConditionDoesNotMatchConditionFromContent;
+use Confetti\Foundation\Helpers\ContentStore;
 use Countable;
 use IteratorAggregate;
 use Traversable;

@@ -1,10 +1,10 @@
 <?php /** @noinspection ALL */
 
 use App\Components\RootComponent;
-use Confetti\Components\Map;
-use Confetti\Helpers\Request;
-use ConfettiCMS\Foundation\Helpers\ComponentStandard;
-use ConfettiCMS\Foundation\Helpers\ContentStore;
+use Confetti\Parser\Components\Map;
+use Confetti\Foundation\Helpers\Request;
+use Confetti\Foundation\Helpers\ComponentStandard;
+use Confetti\Foundation\Helpers\ContentStore;
 
 /**
  * @template M
@@ -30,7 +30,7 @@ function modelById(string $contentId): Map|ComponentStandard
     $as        = $location['file'] . ':' . $location['line'];
 
     $contentStore = new ContentStore($contentId, $as, true);
-    $className = \ConfettiCMS\Foundation\Helpers\ComponentStandard::componentClassById($contentId, $contentStore);
+    $className = \Confetti\Foundation\Helpers\ComponentStandard::componentClassById($contentId, $contentStore);
 
     if (class_exists($className) === false) {
         throw new \RuntimeException('Error: o87huigr3. Model not found: ' . $className . ' for id: ' . $contentId);
@@ -42,9 +42,9 @@ function modelById(string $contentId): Map|ComponentStandard
 /**
  * You can use this in situations where you don't know what the parent classes are.
  */
-function extendModel(\Confetti\Components\Map|\Confetti\Contracts\SelectModelInterface &$component): Map
+function extendModel(\Confetti\Parser\Components\Map|\Confetti\Foundation\Contracts\SelectModelInterface &$component): Map
 {
-    if ($component instanceof \Confetti\Contracts\SelectModelInterface) {
+    if ($component instanceof \Confetti\Foundation\Contracts\SelectModelInterface) {
         return $component->getSelected();
     }
     return $component;

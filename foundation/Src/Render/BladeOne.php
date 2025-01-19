@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace ConfettiCMS\Foundation\Render;
+namespace Confetti\Foundation\Render;
 
 use Exception;
-use ConfettiCMS\Foundation\User;
+use Confetti\Foundation\User;
 use Countable;
 use IteratorAggregate;
 use function array_pop;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ConfettiCMS\Foundation\Render;
+namespace Confetti\Foundation\Render;
 
 class RenderService
 {
