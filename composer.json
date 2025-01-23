@@ -1,16 +1,10 @@
 {
   "require": {
+    "ext-curl": "*",
     "eftec/bladeone": "^4.16",
     "colinodell/json5": "^3.0",
-    "ext-curl": "*",
-    "confetti-cms/foundation": "*"
+    "confetti-cms/foundation": "v0.1.1"
   },
-  "repositories": [
-    {
-      "type": "path",
-      "url": "foundation"
-    }
-  ],
   "autoload": {
     "psr-4": {
       "Confetti\\Parser\\": "/var/resources/confetti-cms__parser/Confetti",
@@ -18,14 +12,6 @@
       "query\\": "/var/resources/confetti-cms__structure/query",
       "App\\": "/src/App/"
     }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Tests\\": "tests/"
-    }
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^10.0"
   },
   "minimum-stability": "dev",
   "prefer-stable": true

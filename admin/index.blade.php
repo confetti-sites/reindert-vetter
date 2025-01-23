@@ -16,15 +16,6 @@ if ($currentContentId === '') {
     <link rel="stylesheet" href="/resources/admin__tailwind/tailwind.output.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />
     <script src="/admin/assets/js/thema.js" defer></script>
-    <style>
-     ._loading-hide {
-         display: none;
-     }
-     ._loading-blur {
-        filter: blur(1px);
-        pointer-events: none;
-     }
-    </style>
 </head>
 
 <body class="text-gray-700 overflow-hidden">

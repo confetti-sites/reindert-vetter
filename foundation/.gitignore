@@ -1,5 +1,0 @@
-.idea
-.DS_Store
-/vendor
-/.phpunit.result.cache
-/tests/Feature/cache
