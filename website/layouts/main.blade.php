@@ -1,7 +1,8 @@
+@php($settings = newRoot(new \model\settings))
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Confetti CMS</title>
+    <title>{{ $settings->text("website_title")->default('Your website title')->help('The main title of your website.') }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resources/website__tailwind/tailwind.output.css"/>
     <link rel="stylesheet" href="/website/assets/css/fonts.css"/>
