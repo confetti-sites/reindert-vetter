@@ -11,7 +11,7 @@
                 <div class="w-full px-4">
                     <div class="mx-auto max-w-[510px] text-center">
                         <h2 class="text-blue-500 mb-2 block text-lg font-semibold">Confetti comes with hosting</h2>
-                        <div class="text-dark mb-4 text-3xl font-bold text-4xl md:text-[40px]">Only pay for hosting</div>
+                        <div class="mb-4 text-3xl font-bold text-4xl md:text-[40px]">Only pay for hosting</div>
                         <p class="text-body-color text-base font-body font-bold text-balance">
                             Only pay for hosting once your site goes live. With Confetti, you don’t need any additional hosting; we manage all server resources in-house, ensuring transparent and predictable costs.
                         </p>
@@ -24,7 +24,7 @@
                         <h2 class="text-blue-500 mb-4 block text-lg font-semibold">
                             Learning, developing and testing
                         </h2>
-                        <div class="text-dark mb-5 text-[42px] font-bold">Free</div>
+                        <div class="mb-5 text-[42px] font-bold">Free</div>
                         <p
                                 class="text-body-color text-base font-body font-bold"
                         >
@@ -44,7 +44,7 @@
                         <h2 class="text-blue-500 mb-4 block text-lg font-semibold">
                             Personal & small business
                         </h2>
-                        <div class="text-dark mb-5 text-[42px] font-bold">
+                        <div class="mb-5 text-[42px] font-bold">
                             €10
                             <span class="text-body-color text-base font-medium"> / month</span>
                         </div>
@@ -55,7 +55,7 @@
                             <h2 class="text-blue-500 mb-4 block text-lg font-semibold">
                                 High traffic website
                             </h2>
-                            <div class="text-dark text-lg font-bold">
+                            <div class="text-lg font-bold">
                                 + €42 <span class="text-body-color text-base font-medium">/ month</span>
                                 <div class="text-body-color text-base font-medium">
                                     <div class="flex-col text-base font-body">
@@ -95,7 +95,7 @@
             <div class="absolute -mt-[50px] left-20 md:left-[250px] w-72 h-72 bg-yellow-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
             <div class="mb-4">
                 <h3 class="flex items-center mb-4 text-lg font-medium">
-                    <svg class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="shrink-0 mr-2 w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                     </svg>
                     Do you offer a plan for students?
@@ -106,7 +106,7 @@
             </div>
             <div class="mb-4">
                 <h3 class="flex items-center mb-4 text-lg font-medium">
-                    <svg class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="shrink-0 mr-2 w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                     </svg>
                     Are You Open to Partnering With Us?
@@ -117,7 +117,7 @@
             </div>
             <div class="mb-4">
                 <h3 class="flex items-center mb-4 text-lg font-medium">
-                    <svg class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="shrink-0 mr-2 w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                     </svg>
                     Is Dedicated Support Available?
@@ -128,7 +128,7 @@
             </div>
             <div class="mb-4">
                 <h3 class="flex items-center mb-4 text-lg font-medium">
-                    <svg class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="shrink-0 mr-2 w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                     </svg>
                     Can I reuse code over multiple websites?
