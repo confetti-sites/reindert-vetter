@@ -1,5 +1,7 @@
 @extends('website.layouts.main')
 
+@section('head_title', 'Pricing')
+
 @section('content')
     <!-- Start pricing -->
     <section class="relative pt-20">

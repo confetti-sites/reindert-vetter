@@ -2,6 +2,8 @@
 
 @extends('website.layouts.main')
 
+@section('head_title', 'Homepage')
+
 @section('content')
     @include('website.includes.hero')
     @include('website.includes.usps')

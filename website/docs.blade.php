@@ -10,6 +10,8 @@
 @endphp
 @extends('website.layouts.main')
 
+@section('head_title', 'Documentation')
+
 @section('content')
 <!-- Left menu -->
 <div class="relative container mx-auto md:flex max-w-8xl justify-center sm:px-2 lg:px-4">

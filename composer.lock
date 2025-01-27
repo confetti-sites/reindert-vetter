@@ -96,16 +96,16 @@
         },
         {
             "name": "confetti-cms/foundation",
-            "version": "v0.1.4",
+            "version": "v0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/confetti-cms/foundation.git",
-                "reference": "6beea542677db7ff30243acbd56a3dd3847be078"
+                "reference": "e0fb2554c85f2f9af7e602bbdde6857e44d8a26b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/confetti-cms/foundation/zipball/6beea542677db7ff30243acbd56a3dd3847be078",
-                "reference": "6beea542677db7ff30243acbd56a3dd3847be078",
+                "url": "https://api.github.com/repos/confetti-cms/foundation/zipball/e0fb2554c85f2f9af7e602bbdde6857e44d8a26b",
+                "reference": "e0fb2554c85f2f9af7e602bbdde6857e44d8a26b",
                 "shasum": ""
             },
             "require": {
@@ -132,9 +132,9 @@
             ],
             "support": {
                 "issues": "https://github.com/confetti-cms/foundation/issues",
-                "source": "https://github.com/confetti-cms/foundation/tree/v0.1.4"
+                "source": "https://github.com/confetti-cms/foundation/tree/v0.1.5"
             },
-            "time": "2025-01-26T22:33:42+00:00"
+            "time": "2025-01-26T22:46:25+00:00"
         },
         {
             "name": "eftec/bladeone",
