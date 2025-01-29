@@ -16,7 +16,7 @@
 {{--    @include('website.under_construction')--}}
 {{--@else()--}}
 
-@include('website.includes.header')
+@include('website.header')
 
 @yield('content')
 

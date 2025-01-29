@@ -300,8 +300,8 @@ class ListComponent
                 $contentId = ComponentStandard::mergeIds($this->parentContentId, $this->relativeContentId);
 
                 // Get the number of items. If not present,
-                $min    = $component->getDecoration('min')['value'] ?? null;
-                $max    = $this->contentStore->getLimit() ?? $component->getDecoration('max')['value'] ?? null;
+                $min    = $component->getDecoration('min', 'min');
+                $max    = $this->contentStore->getLimit() ?? $component->getDecoration('max', 'max');
                 $amount = $this->getFakeAmount($min, $max);
 
                 $i     = 1;

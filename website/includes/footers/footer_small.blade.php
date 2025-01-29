@@ -4,7 +4,7 @@
       <span class="text-sm text-gray-500 sm:text-center">
           © {{ date('Y') }}
           <a href="/" class="hover:underline">
-              {{ $footer->text('first_line')->default('Confetti™') }}
+              Your Company
           </a>
     </span>
         <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">

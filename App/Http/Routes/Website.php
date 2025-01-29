@@ -18,7 +18,7 @@ class Website
     {
         switch (true) {
             case request()->uri() === '/':
-                return new View('website.homepage');
+                return new View('website.homepage.homepage');
             case request()->uri() === '/waiting-list':
                 return new View('website.waitlist');
             case request()->uri() === '/waiting-callback':
@@ -34,11 +34,9 @@ class Website
             case str_starts_with(request()->uri(), '/docs'):
                 return new View('website.docs');
             case request()->uri() === '/blogs':
-                return new View('website.tmp.blog_overview');
+                return new View('website.blog_overview');
             case str_starts_with(request()->uri(), '/blogs/'):
-                return new View('website.tmp.blog_detail');
-            case str_starts_with(request()->uri(), '/features'):
-                return new View('website.features');
+                return new View('website.blog_detail');
             default:
                 return new View('website.404');
         }
