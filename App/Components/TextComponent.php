@@ -35,7 +35,7 @@ class TextComponent extends ComponentStandard
 
         // Guess value
         $component = $this->getComponent();
-        $label = $component->getDecoration('label.value') ?? '';
+        $label = $component->getDecoration('label', 'value') ?? '';
         $haystack = strtolower($component->key . $label);
         if (str_contains($haystack, 'address')) {
             return '123 Main St, Anytown, USA 12345';

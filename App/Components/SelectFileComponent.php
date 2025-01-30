@@ -41,18 +41,7 @@ class SelectFileComponent extends ComponentStandard implements SelectModelInterf
         // Get saved value
         $result = $this->contentStore->findOneData($this->parentContentId, $this->relativeContentId);
         if ($result === null) {
-            $default = $this->getComponent()->getDecoration('default', 'default');
-            if ($default !== null) {
-                $result = $default;
-            }
-
-            if ($this->contentStore->canFake() && $this->contentStore->isFake()) {
-                $options = $this->getOptions();
-                echo '<pre>';
-                var_dump($options);
-                echo '</pre>';
-                exit("<br>exit method: " . __METHOD__ . " <br>file: " . __FILE__ . ":" . __LINE__);
-            }
+            return $this->getComponent()->getDecoration('default', 'default');
         }
 
         return $result;
@@ -91,7 +80,7 @@ class SelectFileComponent extends ComponentStandard implements SelectModelInterf
         // Get default value
         if ($file === null) {
             $component = $this->getComponent();
-            $file      = $component->getDecoration('default');
+            $file      = $component->getDecoration('default', 'default');
         }
 
         // If no default value is set, use the first file in the list

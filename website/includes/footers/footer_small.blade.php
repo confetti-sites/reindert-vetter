@@ -23,9 +23,6 @@
                     {{ $footer->text('text_link_3')->default('Licensing') }}
                 </a>
             </li>
-            <li>
-                <a class="js-contact-e hover:underline"></a>
-            </li>
         </ul>
     </div>
 </footer>

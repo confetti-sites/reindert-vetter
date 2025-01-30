@@ -6,6 +6,7 @@
 
 @section('content')
     @include('website.homepage.hero')
+    @include('website.homepage.cta')
     @include('website.homepage.feature')
-{{--    @include('website.homepage.social_proof')--}}
+    @include('website.homepage.newsletter')
 @endsection

@@ -120,7 +120,7 @@ class ListComponent
     {
         // If has a decoration sortable, then we want to sort the list
         // But if the order is already set, then we don't want to sort the list
-        if ($this->getComponent()->getDecoration('sortable') && empty($this->contentStore->getOrderBy())) {
+        if ($this->getComponent()->getDecoration('sortable', 'sortable') && empty($this->contentStore->getOrderBy())) {
             $this->sortable();
         }
 
@@ -183,14 +183,15 @@ class ListComponent
 
             public function getIterator(): Traversable
             {
-                if ($this->contentStore->canFake() && $this->contentStore->isFake()) {
-                    $this->generateFakeComponents();
-                }
                 if ($this->complete) {
                     foreach ($this->result as $item) {
                         yield $item;
                     }
                     return;
+                }
+
+                if ($this->contentStore->canFake() && $this->contentStore->isFake()) {
+                    $this->generateFakeComponents();
                 }
 
                 try {
@@ -503,7 +504,7 @@ class ListComponent
 
     private static function getDefinedColumns(self $model): ?array
     {
-        return $model->getComponent()->getDecoration('columns');
+        return $model->getComponent()->getDecoration('columns', 'columns');
     }
 
     private static function getDefaultColumns(self $model): array
