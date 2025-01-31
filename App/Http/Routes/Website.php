@@ -20,23 +20,17 @@ class Website
             case request()->uri() === '/':
                 return new View('website.homepage.homepage');
             case request()->uri() === '/waiting-list':
-                return new View('website.waitlist');
+                return new View('website.login');
             case request()->uri() === '/waiting-callback':
-                return new View('website.waitlist_callback');
+                return new View('website.login_callback');
             case request()->uri() === '/auth/callback':
                 return new View('website.includes.auth.callback');
-            case request()->uri() === '/waiting-list-step-1':
-                return new View('website.waiting-list-step-1');
-            case request()->uri() === '/waiting-list-step-2':
-                return new View('website.waiting-list-step-2');
             case request()->uri() === '/pricing':
-                return new View('website.pricing');
-            case str_starts_with(request()->uri(), '/docs'):
-                return new View('website.docs');
+                return new View('website.pricing.pricing');
             case request()->uri() === '/blogs':
-                return new View('website.blog_overview');
+                return new View('website.blog.overview');
             case str_starts_with(request()->uri(), '/blogs/'):
-                return new View('website.blog_detail');
+                return new View('website.blog.detail');
             default:
                 return new View('website.404');
         }

@@ -20,8 +20,7 @@
                 <div class="js-menu hidden flex-col space-y-2 px-4 py-2 bg-white md:flex md:flex-row md:space-y-0 md:space-x-4 md:border-none md:py-0">
                     <a href="/" class="block md:hidden transition hover:text-primary px-4 py-2 md:py-2">Home</a>
                     <a href="/pricing" class="block relative transition hover:text-primary px-4 py-2 md:py-2">Pricing</a>
-                    <a href="/blog" class="block relative transition hover:text-primary px-4 py-2 md:py-2">Blog</a>
-                    <a href="/docs/installation" class="block transition hover:text-primary px-4 py-2 md:py-2">Docs</a>
+                    <a href="/blogs" class="block relative transition hover:text-primary px-4 py-2 md:py-2">Blog</a>
                 </div>
             </div>
         </div>

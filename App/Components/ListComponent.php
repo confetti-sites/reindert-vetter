@@ -143,7 +143,8 @@ class ListComponent
         // of the time, the number of component types is less than 2 because when you adjust one part
         // (in the middle) of the query, we can use the cached query to retrieve the rest of the query.
         return new class($this->parentContentId, $this->relativeContentId, $this->contentStore, $this->as, $className) implements IteratorAggregate, Countable {
-            private array $result = [];
+            // If null, then the results are not fetched/generated yet
+            private ?array $result = null;
             private bool $complete = false;
 
             public function __construct(
@@ -161,14 +162,13 @@ class ListComponent
              */
             public function generateFakeComponents(): void
             {
-                if ($this->complete) {
+                if ($this->result !== null) {
                     return;
                 }
 
                 // We store the fake components in a property, because we want to generate them only once.
                 // Otherwise, we generate them every time with different results.
-                $this->result ??= $this->getFakeComponents($this->className);
-                $this->complete = true;
+                $this->result = $this->getFakeComponents($this->className);
             }
 
             public function toArray(): array
@@ -183,12 +183,26 @@ class ListComponent
 
             public function getIterator(): Traversable
             {
-                if ($this->complete) {
+                if ($this->result !== null) {
                     foreach ($this->result as $item) {
                         yield $item;
                     }
                     return;
                 }
+
+                // $this->contentStore->getWhere()
+                // array(1) {
+                //  [0]=>
+                //  array(3) {
+                //    ["key"]=>
+                //    string(31) "/model/blog_overview/blog~/slug"
+                //    ["operator"]=>
+                //    string(1) "="
+                //    ["expression_value"]=>
+                //    string(9) "fake-slug"
+                //  }
+                //}
+                // loop over the where and check if the expression_value is "fake-slug"
 
                 if ($this->contentStore->canFake() && $this->contentStore->isFake()) {
                     $this->generateFakeComponents();
@@ -260,7 +274,6 @@ class ListComponent
 
                 // When the limit is 1, we don't need to load the rest of the items
                 if ($this->contentStore->getLimit() === 1) {
-                $this->complete = true;
                     return;
                 }
 
@@ -273,7 +286,6 @@ class ListComponent
                     $this->result[] = $row;
                     yield $row;
                 }
-                $this->complete = true;
             }
 
             /**
@@ -336,7 +348,8 @@ class ListComponent
 
                 // Use min, average or max
                 $average = ($min + $max) / 2;
-                $amount  = [$min, $average, $max];
+                // Give the average 2 times more chance
+                $amount  = [$min, $average, $average, $max];
                 return (int) $amount[array_rand($amount)];
             }
         };

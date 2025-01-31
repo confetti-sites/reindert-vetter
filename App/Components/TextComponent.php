@@ -46,7 +46,7 @@ class TextComponent extends ComponentStandard
         if (str_contains($haystack, 'last') && str_contains($haystack, 'name')) {
             return 'Müller';
         }
-        if (str_contains($haystack, 'name')) {
+        if (str_contains($haystack, 'name') || $haystack === 'author') {
             return 'Sébastien Müller';
         }
         if (str_contains($haystack, 'company') || str_contains($haystack, 'business')) {
@@ -60,6 +60,9 @@ class TextComponent extends ComponentStandard
         }
         if (str_contains($haystack, 'city')) {
             return 'Anytown';
+        }
+        if (str_ends_with($this->getComponent()->key, '/slug')) {
+            return '__fake__slug';
         }
 
         // Generate Lorem Ipsum
