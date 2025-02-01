@@ -21,6 +21,7 @@
                     <a href="/" class="block md:hidden transition hover:text-primary px-4 py-2 md:py-2">Home</a>
                     <a href="/pricing" class="block relative transition hover:text-primary px-4 py-2 md:py-2">Pricing</a>
                     <a href="/blogs" class="block relative transition hover:text-primary px-4 py-2 md:py-2">Blog</a>
+                    <a href="/contact" class="block relative transition hover:text-primary px-4 py-2 md:py-2">Contact</a>
                 </div>
             </div>
         </div>

@@ -27,6 +27,8 @@ class Website
                 return new View('website.includes.auth.callback');
             case request()->uri() === '/pricing':
                 return new View('website.pricing.pricing');
+            case request()->uri() === '/contact':
+                return new View('website.contact.contact');
             case request()->uri() === '/blogs':
                 return new View('website.blog.overview');
             case str_starts_with(request()->uri(), '/blogs/'):
