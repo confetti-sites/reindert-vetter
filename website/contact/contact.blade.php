@@ -39,7 +39,7 @@
                     <div class="lg:max-w-lg">
                         <h2 class="text-base/7 font-semibold text-indigo-600">{{ $page->text('social_media_title')->default('LinkedIn') }}</h2>
                         <p class="mt-2 font-semibold tracking-tight text-pretty text-gray-900">
-                            <a href="{{ $page->social_media }}" target="_blank">{{ $page->text('social_media')->default('https://www.linkedin.com/reindert-vetter') }}</a>
+                            <a href="{{ $page->social_media }}" target="_blank">{{ $page->text('social_media')->default('https://www.linkedin.com/404/') }}</a>
                         </p>
                     </div>
                 </div>

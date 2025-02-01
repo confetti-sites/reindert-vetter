@@ -9,7 +9,7 @@
                     <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">A better workflow</p>
                     <p class="mt-6 text-lg/8 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
                     <dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
-                        @foreach($feature->list('feature')->limit(5)->get() as $item)
+                        @foreach($feature->list('feature')->min(3)->max(5)->get() as $item)
                         <div class="relative">
                             <dt class="inline font-semibold text-gray-900">
                                 {{ $item->text('title')->max(50) }}
