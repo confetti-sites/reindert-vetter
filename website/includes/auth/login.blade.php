@@ -1,7 +1,7 @@
 @extends('website.layouts.blank')
 @section('content')
     <div class="hidden container flex h-screen font-body js-loading">
-        <div class="m-auto w-96 p-6 border rounded-lg shadow-lg bg-white">
+        <div class="m-auto w-96 p-6">
             <h1 id="model-title" class="text-3xl font-semibold text-gray-800 text-center">Redirect to login...</h1>
         </div>
     </div>
@@ -34,7 +34,7 @@
         // Show loading bar after 1 second
         setTimeout(() => {
             document.querySelector('.js-loading').classList.remove('hidden');
-        }, 1000);
+        }, 3000);
     </script>
 @endpushonce
 
