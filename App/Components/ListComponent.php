@@ -190,19 +190,7 @@ class ListComponent
                     return;
                 }
 
-                // $this->contentStore->getWhere()
-                // array(1) {
-                //  [0]=>
-                //  array(3) {
-                //    ["key"]=>
-                //    string(31) "/model/blog_overview/blog~/slug"
-                //    ["operator"]=>
-                //    string(1) "="
-                //    ["expression_value"]=>
-                //    string(9) "fake-slug"
-                //  }
-                //}
-                // loop over the where and check if the expression_value is "fake-slug"
+
 
                 if ($this->contentStore->canFake() && $this->contentStore->isFake()) {
                     $this->generateFakeComponents();

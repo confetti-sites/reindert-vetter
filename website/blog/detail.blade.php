@@ -8,7 +8,7 @@
 @section('head_title', $blog->title ?? 'Blog not found')
 
 
-@if($blog)
+@if(!$blog)
     @section('content')
         <div class="bg-white py-24 sm:py-32">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">

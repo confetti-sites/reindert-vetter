@@ -61,9 +61,6 @@ class TextComponent extends ComponentStandard
         if (str_contains($haystack, 'city')) {
             return 'Anytown';
         }
-        if (str_ends_with($this->getComponent()->key, '/slug')) {
-            return '__fake__slug';
-        }
 
         // Generate Lorem Ipsum
         // Use different lengths for max to make it more interesting
