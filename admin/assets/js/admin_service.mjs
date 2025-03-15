@@ -99,12 +99,11 @@ export class Storage {
                 .filter(key => specific ? key === id : (prefixQ.startsWith(key) || key.startsWith(prefixQ)))
                 .filter(key => localStorage.getItem(key) !== 'undefined')
                 .map(key => {
-                    // We want to decode, so we can save numbers and booleans
-                    let value = JSON.parse(localStorage.getItem(key));
-                    // We can't save objects to the server, so we need to convert them to strings
-                    if (typeof value === 'object') {
-                        value = JSON.stringify(value);
+                    let value = localStorage.getItem(key);
+                    if (value === 'null') {
+                        value = null;
                     }
+
                     return {
                         "id": key,
                         "value": value
