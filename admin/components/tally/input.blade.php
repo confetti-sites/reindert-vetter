@@ -147,8 +147,8 @@
 
                 // When not saved yet, we need to save
                 // some value (with component) to show it in the list
-                if (this.data.value === null && this.original !== null) {
-                    Storage.saveLocalStorageModel(this.id, this.data.value, this.dataset.component);
+                if (this.data.value === null) {
+                    Storage.saveComponent(this.id, this.dataset.component);
                 }
 
                 this.validateAndInit(this.data.value?.share_link);

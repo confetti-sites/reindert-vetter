@@ -36,8 +36,10 @@ export default class {
     toHtml() {
         return `
             <div class="flex items-center justify-between pt-3 pb-3 pl-3 pr-4 sm:pr-0">
+                ${this.value ? ` 
                 <div class="line-clamp-2">${this.value.title}</div>
-                <a href="${this.value.admin_url}" target="_blank" class="px-2 py-1 text-sm font-medium leading-5 cursor-pointer text-white bg-emerald-700 hover:bg-emerald-800 border border-transparent rounded-md">Tally</a>
+                <a href="${this.value.admin_url}" target="_blank" class="px-2 py-1 text-sm font-medium leading-5 cursor-pointer text-white bg-emerald-700 hover:bg-emerald-800 border border-transparent rounded-md whitespace-nowrap">Tally</a>
+                ` : 'Not provided'}
             </div>`;
     }
 }

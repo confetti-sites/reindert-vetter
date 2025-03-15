@@ -4,7 +4,7 @@ export class Storage {
 
         if (component) {
             // We need to save the component: When we load the list, we need to know what the component details are.
-            localStorage.setItem('/component' + id, component);
+            this.saveComponent(id, component);
         }
 
         // Don't save if the value is the same
@@ -12,6 +12,10 @@ export class Storage {
             return;
         }
         localStorage.setItem(id, value);
+    }
+
+    static saveComponent(id, component) {
+        localStorage.setItem('/component' + id, component);
     }
 
     /**
@@ -100,8 +104,21 @@ export class Storage {
                 .filter(key => localStorage.getItem(key) !== 'undefined')
                 .map(key => {
                     let value = localStorage.getItem(key);
-                    if (value === 'null') {
-                        value = null;
+                    if (value === 'undefined') {
+                        console.warn('Local storage item id ' + key + ' has string: "undefined". Skipping.');
+                        return null;
+                    }
+                    value = (value === 'null') ? null : value;
+
+                    // Most of the time the value is a JSON string, so we need to parse it
+                    if (typeof value === 'string') {
+                        value = JSON.parse(value);
+                    }
+
+                    // When after JSON parse the value is a string, we don't want to save it as an object
+                    // Otherwise, we can't save objects to the server, so we need to convert them to strings
+                    if (typeof value === 'object' && value !== null) {
+                        value = JSON.stringify(value);
                     }
 
                     return {

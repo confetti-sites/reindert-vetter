@@ -163,7 +163,7 @@
                     const wrapper = document.getElementById(uniqueId);
                     if (wrapper) {
                         console.error("Can't load component in list with ID: " + id, error);
-                        wrapper.innerHTML = `Can't load component`;
+                        wrapper.innerHTML = `<span class="p-3 line-clamp-2">Can't load component</span>`;
                     }
                 });
 
