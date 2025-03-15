@@ -108,17 +108,16 @@ export class Storage {
                         console.warn('Local storage item id ' + key + ' has string: "undefined". Skipping.');
                         return null;
                     }
-                    value = (value === 'null') ? null : value;
+                    // If the value is 'null', we want to save it as null
+                    // value = (value === 'null') ? null : value;
 
-                    // Most of the time the value is a JSON string, so we need to parse it
-                    if (typeof value === 'string') {
-                        value = JSON.parse(value);
-                    }
-
-                    // When after JSON parse the value is a string, we don't want to save it as an object
-                    // Otherwise, we can't save objects to the server, so we need to convert them to strings
-                    if (typeof value === 'object' && value !== null) {
-                        value = JSON.stringify(value);
+                    // If the value is meant to be a string or null (not an object), we need to parse it
+                    if (!value.startsWith('{')){
+                        try {
+                            value = JSON.parse(value);
+                        } catch (e) {
+                            console.error('Error parsing JSON:', e);
+                        }
                     }
 
                     return {
