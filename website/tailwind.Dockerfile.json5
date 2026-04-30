@@ -1,0 +1,14 @@
+{
+  // The container_name of this container is `website/tailwind`.
+  description: "The Tailwind container compiles Tailwind CSS for the website.",
+  "sync_granted": [
+    {
+      description: "The view container needs access to the compiled assets in order to serve them.",
+      scheme: "assets",
+      expose_path: "/var/resources",
+      readonly: true,
+      container_name: "view",
+      target: "all_up",
+    },
+  ],
+}

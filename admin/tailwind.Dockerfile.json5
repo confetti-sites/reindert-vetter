@@ -1,0 +1,30 @@
+{
+  // The container_name of this container is `admin/tailwind`.
+  description: "The Tailwind container compiles Tailwind CSS for the admin panel.",
+  "sync_granted": [
+    {
+      description: "The view container needs access to the compiled assets in order to serve them.",
+      scheme: "assets",
+      expose_path: "/var/resources",
+      readonly: true,
+      container_name: "view",
+      target: "all_up",
+    },
+  ],
+  "sync_requested": [
+    {
+      description: "The Tailwind container needs the html files in the pkg directory in order to compile the Tailwind CSS for the admin panel.",
+      scheme: "pkg",
+      readonly: true,
+      destination_path: "/src/pkg",
+      container_name: "view",
+    },
+    {
+      description: "The Tailwind container needs the html files in the pkg directory in order to compile the Tailwind CSS for the admin panel.",
+      scheme: "vendor",
+      readonly: true,
+      destination_path: "/src/vendor",
+      container_name: "view",
+    }
+  ],
+}

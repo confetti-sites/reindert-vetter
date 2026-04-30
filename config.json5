@@ -1,0 +1,63 @@
+ /*******************************************************************************\
+|                                                                                |
+|   Notice:                                                                      |
+|                                                                                |
+|   Only when you participate in the Agency Program, you can change this file.   |
+|                                                                                |
+ \*******************************************************************************/
+
+
+
+{
+  // Here you can define your own configuration (e.g., the company name)
+  // You can get this value in php with `config('options.company_name')`
+  options: {
+    company_name: 'Your Company Name',
+  },
+  environments: [
+    // Local development environment
+    {
+      // Key serves as a name for the environment
+      // Common values: 'prod', test or 'dev', but it’s flexible
+      // In teams, you can use your name for your personal development environment
+      name: 'dev',
+      // Determines the target code in the Dockerfile to run
+      // - development (monitors code changes)
+      // - production (optimized for speed)
+      // For testing, use 'production' and set the name to 'test'
+      stage: 'development',
+      options: {
+        when_no_data_is_saved_show_fake_data: true,
+        // Enable hot reload and show development hints
+        // When enabled and the user is logged in, the dev tools will be shown
+        dev_tools: true,
+      },
+      containers: [
+        // Main view container
+        {
+          // Do not change the name 'view' since it is connected to the view.Dockerfile
+          name: 'view',
+          hosts: [
+            '__HOST__',
+          ],
+          paths: [
+            '/',
+          ],
+        },
+        // For all api containers
+        {
+          hosts: [
+            '__HOST__',
+          ],
+          paths: [
+            // '__SERVICE__' will be replaced with the name of the container.
+            // The place of the Dockerfile generates the container name.
+            // For /website/tailwind.Dockerfile, the container name will be 'website-tailwind'.
+            // The container 'website-tailwind' will be available at '/conf_api/website-tailwind'.
+            '/conf_api/__SERVICE__',
+          ],
+        },
+      ],
+    }
+  ],
+}
