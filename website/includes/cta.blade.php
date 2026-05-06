@@ -13,7 +13,9 @@
             </div>
         </div>
     </div>
-    <p class="text-gray-500 italic font-serif font-body text-sm">
-        You can edit this HTML in cta.blade.php
-    </p>
+    <div class=" flex items-center justify-center">
+        <p class="text-gray-500 italic font-serif font-body text-sm">
+            You can edit this HTML in cta.blade.php
+        </p>
+    </div>
 </div>
