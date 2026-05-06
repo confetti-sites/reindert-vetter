@@ -1,6 +1,6 @@
 @php(newRoot(new \model\homepage))
-@section('head_title', 'Confetti CMS')
-@section('head_description', 'Confetti CMS lets you build your own white-label CMS with full control over your templates.')
+@section('head_title', 'Your homepage title, you can edit this in homepage.blade.php')
+@section('head_description', 'The description for the homepage.')
 @extends('website.layouts.main')
 
 @section('content')

@@ -16,10 +16,11 @@ class Website
     public static function render(): View
     {
         return match (true) {
-            request()->uri() === '/'                       => new View('website.homepage'),
-            request()->uri() === '/auth/callback'          => new View('website.includes.auth.callback'),
-            request()->uri() === '/blogs'                => new View('website.blogs'),
-            default                                        => new View('website.404'),
+            request()->uri() === '/'                     => new View('website.homepage'),
+            request()->uri() === '/auth/callback'        => new View('website.includes.auth.callback'),
+            request()->uri() === '/blogs'                => new View('website.blog_overview'),
+            str_starts_with(request()->uri(), '/blogs/') => new View('website.blog_detail'),
+            default                                      => new View('website.404'),
         };
     }
 }
