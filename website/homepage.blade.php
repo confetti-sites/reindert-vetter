@@ -6,10 +6,7 @@
 @section('content')
     @include('website.includes.hero')
     @include('website.includes.usps')
-{{--    -- examples of admin --}}
-{{--    -- examples of different websites. Blogs / static websites --}}
-    @include('website.includes.compare')
-    @include('website.includes.steps')
+    @include('website.includes.blocks')
     @include('website.includes.newsletter')
     @include('website.includes.cta')
 @endsection
